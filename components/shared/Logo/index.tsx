@@ -4,14 +4,17 @@ import Image from 'next/image';
 
 const Logo: React.FC = () => {
   return (
-    <>
-      <Link href="/">
-        <a>
-          <Image src="/assets/logo-games.png" alt="Logo Cubo Games" width={220} height={40}/>
-        </a>
-      </Link>
-    </>
+    <Link href="/">
+      <a>
+        <Image
+          src="/assets/logo-games.png"
+          alt="Logo Cubo Games"
+          width={220}
+          height={40}
+        />
+      </a>
+    </Link>
   );
-}
+};
 
 export default Logo;
