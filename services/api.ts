@@ -1,10 +1,9 @@
-import 'dotenv/config';
 import axios from 'axios';
 import Cookie from 'js-cookie';
 import ApiData from '../dtos/ApiData';
 
 const api = axios.create({
-  baseURL: process.env.APP_BASE_URL,
+  baseURL: 'http://localhost:3000',
 });
 
 api.interceptors.response.use((res) => {

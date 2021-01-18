@@ -1,4 +1,3 @@
-import 'dotenv/config';
 import api from './api';
 import User from '../dtos/User';
 
@@ -20,14 +19,14 @@ interface SignUpData {
 
 const UsersService = {
   signUp: ({ name, email, password, password_confirmation }: SignUpData) =>
-    api.post<void>(process.env.SIGN_UP_URL, {
+    api.post<void>('auth/v1/user', {
       name,
       email,
       password,
       password_confirmation
     }),
   signIn: ({ email, password }: SignInData) =>
-    api.post<SignInResponse>(process.env.SIGN_IN_URL, {
+    api.post<SignInResponse>('auth/v1/user/sign_in', {
       email,
       password
     }),
