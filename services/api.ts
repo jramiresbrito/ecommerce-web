@@ -1,7 +1,7 @@
 import axios, { AxiosResponse } from 'axios';
 import Cookie from 'js-cookie';
 import ApiData from '../dtos/ApiData';
-import ApiResponseError from '../dtos/ApiReponseError';
+import ApiResponseError from '../dtos/ApiResponseError';
 import Router from 'next/router';
 import { toast } from 'react-toastify';
 
