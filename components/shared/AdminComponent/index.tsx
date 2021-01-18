@@ -1,6 +1,8 @@
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
 import AdminHeader from '../Header/AdminHeader';
+import AdminFooter from '../Footer/AdminFooter';
+
 
 const AdminComponent: React.FC = ({ children }) => {
   return (
@@ -12,6 +14,8 @@ const AdminComponent: React.FC = ({ children }) => {
           <AdminHeader name="Nome do User" />
 
           <div className="flex-fill text-center">{children}</div>
+
+          <AdminFooter />
         </div>
       </Col>
     </Row>
