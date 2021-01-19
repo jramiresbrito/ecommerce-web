@@ -21,7 +21,7 @@ interface AdminHeaderProps {
 const AdminHeader: React.FC<AdminHeaderProps> = ({ name }) => {
   return (
     <Row className={styles.background}>
-      <Col lg={6} xs>
+      <Col lg={6} xs={9}>
         <Link href="/Admin">
           <a>
             <FontAwesomeIcon
@@ -87,7 +87,7 @@ const AdminHeader: React.FC<AdminHeaderProps> = ({ name }) => {
         </Link>
       </Col>
 
-      <Col lg={6} xs>
+      <Col lg={6} xs={3} className="d-none d-md-block">
         <div className="float-right">
           <span className={styles.name}>{name}</span>
           <FontAwesomeIcon
