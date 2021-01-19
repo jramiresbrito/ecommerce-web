@@ -1,13 +1,13 @@
 import React from 'react';
-import styles from '../../../styles/AdminPanel.module.css';
 import { Modal, Row, Col } from 'react-bootstrap';
 import { faTrash, faTimes } from '@fortawesome/free-solid-svg-icons';
+import styles from '../../../styles/AdminPanel.module.css';
 import StyledButton from '../StyledButton';
 
 interface AdminDeleteModalProps {
   show: boolean;
-  handleClose: (success?: boolean) => void;
-  target: String;
+  handleClose: (success: boolean) => void;
+  target: string;
 }
 
 const AdminDeleteModal: React.FC<AdminDeleteModalProps> = ({
@@ -24,7 +24,6 @@ const AdminDeleteModal: React.FC<AdminDeleteModalProps> = ({
     >
       <Modal.Body className={styles.modal_body}>
         Tem certeza que deseja excluir este {target}?
-        
         <Row>
           <Col lg={6} xs>
             <div onClick={() => handleClose(true)}>
@@ -37,7 +36,7 @@ const AdminDeleteModal: React.FC<AdminDeleteModalProps> = ({
           </Col>
 
           <Col lg={6} xs>
-            <div onClick={() => handleClose(true)}>
+            <div onClick={() => handleClose(false)}>
               <StyledButton
                 icon={faTimes}
                 action={'Cancelar'}
