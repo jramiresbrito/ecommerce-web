@@ -2,8 +2,8 @@ import React from 'react';
 import styles from '../../../../styles/AdminTitle.module.css';
 
 interface TitleAndPath {
-  title: String;
-  path: String;
+  title: string;
+  path: string;
 }
 
 const TitleAndPath: React.FC<TitleAndPath> = ({ title, path }) => {
