@@ -1,6 +1,7 @@
 import React from 'react';
-import Logo from '../Logo';
 import styles from '../../../styles/LateralMenu.module.css';
+import Logo from '../Logo';
+import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faSignal,
@@ -12,7 +13,6 @@ import {
   faDollarSign,
   faSignOutAlt,
 } from '@fortawesome/free-solid-svg-icons';
-import Link from 'next/link';
 
 const LateralMenu: React.FC = () => {
   return (
