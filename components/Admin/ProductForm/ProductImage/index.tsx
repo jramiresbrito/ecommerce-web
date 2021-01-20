@@ -14,7 +14,7 @@ const ProductImage: React.FC<ProductImageProps> = ({
   setImage,
   productImage,
 }) => {
-  const [imageToShow, setImageToShow] = useState('/assets/product-image.png');
+  const [imageToShow, setImageToShow] = useState('/assets/product_image.png');
   const imageInputRef = useRef(null);
 
   useEffect(() => {
