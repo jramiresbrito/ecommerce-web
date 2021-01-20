@@ -2,14 +2,14 @@ import api from './api';
 import Product from '../dtos/Product';
 import Meta from '../dtos/Meta';
 
-interface IProductsIndexData {
+interface ProductsIndexData {
   products: Product[];
   meta: Meta;
 }
 
 const ProductsService = {
   index: (url: string) => {
-    return api.get<IProductsIndexData>(url).then((response) => response.data);
+    return api.get<ProductsIndexData>(url).then((response) => response.data);
   },
 
   create: (product: FormData) => {
