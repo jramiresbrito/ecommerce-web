@@ -2,7 +2,7 @@ import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import TitleAndPath from './TitleAndPath';
 import SearchAndIcon from './SearchAndIcon';
-import styles from '../../../styles/AdminTitle.module.css';
+import styles from './styles.module.css';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 interface TitleAdminPanelProps {
