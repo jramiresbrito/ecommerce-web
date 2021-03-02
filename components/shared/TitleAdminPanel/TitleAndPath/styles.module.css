@@ -7,6 +7,10 @@
 
 @media (max-width: 1200px) {
   .styledPath {
-    display: none!important;
+    display: none !important;
+  }
+
+  .title {
+    margin-left: 10px;
   }
 }
