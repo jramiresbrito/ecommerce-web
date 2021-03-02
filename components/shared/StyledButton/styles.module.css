@@ -1,6 +1,6 @@
 .red_button {
   background: none;
-  border: 2px solid rgb(200, 10, 10);
+  border: 2px solid rgb(200,10,10);
 }
 
 .red_button:hover {
@@ -9,10 +9,10 @@
 
 .blue_button {
   background: none;
-  border: 2px solid rgb(10, 10, 200);
+  border: 2px solid rgb(10,10,200);
 }
 
 .blue_button:hover {
   background: none;
-  border: 2px solid rgb(10, 200, 200);
+  border: 2px solid rgb(10,200,200);
 }

@@ -1,0 +1,44 @@
+.admin_panel {
+  background-color: var(--color-secondary);
+  padding: 30px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.admin_panel table {
+  color: white;
+  border-collapse: separate;
+  border-spacing: 0 1em;
+}
+
+.table_line {
+  background-color: var(--color-background);
+  padding-right: 110px;
+}
+
+.table_line:hover {
+  color: white !important;
+}
+
+.admin_panel table thead tr th {
+  text-align: left;
+}
+
+.admin_panel table thead tr th:last-of-type {
+  text-align: center;
+}
+
+.admin_panel table tbody tr {
+  background-color: var(--color-background);
+  padding-right: 110px;
+}
+
+.admin_panel table tbody tr:hover {
+  color: white !important;
+}
+
+.admin_panel table tr td div:hover {
+  cursor: pointer;
+  color: var(--color-hover);
+  transition: color 0.2s;
+}

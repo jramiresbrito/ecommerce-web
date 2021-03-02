@@ -1,6 +1,6 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
-import styles from '../../../../styles/AdminHeader.module.css';
+import styles from './styles.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faSignal,
@@ -14,20 +14,26 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
 
+import { useRouter } from 'next/router';
+
 interface AdminHeaderProps {
   name: string;
 }
 
 const AdminHeader: React.FC<AdminHeaderProps> = ({ name }) => {
+  const router = useRouter();
+
   return (
     <Row className={styles.background}>
-      <Col lg={6} xs={9}>
+      <Col lg={6} xs={12} className={styles.menu}>
         <Link href="/Admin">
           <a>
             <FontAwesomeIcon
               icon={faSignal}
               color="var(--color-gray-light)"
-              className="ml-3"
+              className={`ml-3 ${
+                router.pathname == '/Admin' ? styles.active : ''
+              }`}
             />
           </a>
         </Link>
@@ -36,7 +42,9 @@ const AdminHeader: React.FC<AdminHeaderProps> = ({ name }) => {
             <FontAwesomeIcon
               icon={faUser}
               color="var(--color-gray-light)"
-              className="ml-3"
+              className={`ml-3 ${
+                router.pathname == '/Admin/Users/List' ? styles.active : ''
+              }`}
             />
           </a>
         </Link>
@@ -45,7 +53,9 @@ const AdminHeader: React.FC<AdminHeaderProps> = ({ name }) => {
             <FontAwesomeIcon
               icon={faGamepad}
               color="var(--color-gray-light)"
-              className="ml-3"
+              className={`ml-3 ${
+                router.pathname == '/Admin/Products/List' ? styles.active : ''
+              }`}
             />
           </a>
         </Link>
@@ -54,7 +64,9 @@ const AdminHeader: React.FC<AdminHeaderProps> = ({ name }) => {
             <FontAwesomeIcon
               icon={faCheckSquare}
               color="var(--color-gray-light)"
-              className="ml-3"
+              className={`ml-3 ${
+                router.pathname == '/Admin/Categories/List' ? styles.active : ''
+              }`}
             />
           </a>
         </Link>
@@ -63,7 +75,11 @@ const AdminHeader: React.FC<AdminHeaderProps> = ({ name }) => {
             <FontAwesomeIcon
               icon={faLaptop}
               color="var(--color-gray-light)"
-              className="ml-3"
+              className={`ml-3 ${
+                router.pathname == '/Admin/SystemRequirements/List'
+                  ? styles.active
+                  : ''
+              }`}
             />
           </a>
         </Link>
@@ -72,7 +88,9 @@ const AdminHeader: React.FC<AdminHeaderProps> = ({ name }) => {
             <FontAwesomeIcon
               icon={faTicketAlt}
               color="var(--color-gray-light)"
-              className="ml-3"
+              className={`ml-3 ${
+                router.pathname == '/Admin/Coupons/List' ? styles.active : ''
+              }`}
             />
           </a>
         </Link>
@@ -87,14 +105,9 @@ const AdminHeader: React.FC<AdminHeaderProps> = ({ name }) => {
         </Link>
       </Col>
 
-      <Col lg={6} xs={3} className="d-none d-md-block">
-        <div className="float-right">
-          <span className={styles.name}>{name}</span>
-          <FontAwesomeIcon
-            icon={faUserCircle}
-            color="var(--color-gray-light)"
-          />
-        </div>
+      <Col lg={6} xs={3} className={styles.profile}>
+        <span className={styles.name}>{name}</span>
+        <FontAwesomeIcon icon={faUserCircle} color="var(--color-gray-light)" />
       </Col>
     </Row>
   );
