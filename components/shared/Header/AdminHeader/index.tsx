@@ -11,17 +11,23 @@ import {
   faTicketAlt,
   faDollarSign,
   faUserCircle,
+  faSignOutAlt,
 } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
 
 import { useRouter } from 'next/router';
+import { useSelector } from 'react-redux';
+import User from '../../../../dtos/User';
+import SignOutService from '../../../../util/SignOutService';
 
 interface AdminHeaderProps {
   name: string;
 }
 
-const AdminHeader: React.FC<AdminHeaderProps> = ({ name }) => {
+const AdminHeader: React.FC = () => {
   const router = useRouter();
+
+  const { name }: User = useSelector((state) => state.auth.loggedUser);
 
   return (
     <Row className={styles.background}>
@@ -98,6 +104,18 @@ const AdminHeader: React.FC<AdminHeaderProps> = ({ name }) => {
           <a>
             <FontAwesomeIcon
               icon={faDollarSign}
+              color="var(--color-gray-light)"
+              className="ml-3"
+            />
+          </a>
+        </Link>
+        <Link href="/Auth/Login">
+          <a
+            onClick={SignOutService.execute}
+            onTouchEnd={() => SignOutService.execute()}
+          >
+            <FontAwesomeIcon
+              icon={faSignOutAlt}
               color="var(--color-gray-light)"
               className="ml-3"
             />
