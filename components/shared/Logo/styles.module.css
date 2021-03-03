@@ -2,5 +2,6 @@
   .logo {
     display: block;
     text-align: center;
+    visibility: visible;
   }
 }
