@@ -26,7 +26,7 @@ const TitleAdminPanel: React.FC<TitleAdminPanelProps> = ({
             <TitleAndPath title={title} path={path} />
           </Col>
 
-          <Col lg={{ span: 4, offset: 2 }} xs={8}>
+          <Col lg={6} xs={8}>
             <SearchAndIcon icon={icon} newPath={newPath} />
           </Col>
         </>
